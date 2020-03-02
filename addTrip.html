@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Trip</title>
+    <link rel="stylesheet" href="app.css">
+ 
+  </head>
+  <body>
+  <!-- Nav Bar Starts-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Joshua</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto navbar-right" style="margin-left:100px" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Vechile<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="consignment.html">Consignment<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="trip.html">Trip</a>
+                  </li>
+            </ul>
+        </div>
+  </nav>
+  <!--End of Nav Bar-->
+  <!--Start of the form -->
+  <div style="margin:50px">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="trip.html">Trip</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Add Trip</li>
+    </ol>
+  </nav>
+      <h2 style="margin-left:650px;margin-bottom:20px">Add Trip</h2>
+      <form method="post" action="#" id="tripForm">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Carcompany">Vehicle ID</label>
+              <input type="number" class="form-control" placeholder = "Vehicle ID" id="vechile_id" name="vechile_id">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Model">Material ID</label>
+              <input type="number" class="form-control" placeholder = "Material ID" name="material_id" id="material_id">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Start Date</label>
+              <input type="text" class="form-control" placeholder="Start Date" name="start_date" id="start_date">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Destination Lat</label>
+              <input type="number" class="form-control" placeholder="Destination Lat" name="destination_lat"  id="destination_lat">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Destination Lon</label>
+              <input type="number" class="form-control" placeholder="Destination Lon" name="destination_lon" id="destination_lon">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Current Location Lan</label>
+              <input type="number" class="form-control" placeholder="Current Location Lan" name="current_location_lan" id="current_location_lan">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Current Location Lon</label>
+              <input type="number" class="form-control" placeholder="Current Location Lon" name="current_location_lon" id="current_location_lon">
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+                <div class="form-group col-md-4" style="margin-left:450px">
+                  <button type="submit" class="btn btn-success">Add Trip</button>
+              </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  <!--End of the form -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+      <script>
+        $(document).ready(function(){
+            $('#tripForm').submit(function (event) {
+                event.preventDefault();
+                var vechile_id = $('#vechile_id').val();
+                var material_id = $('#material_id').val();
+                var start_date = $('#start_date').val();
+                var destination_lat  = $('#destination_lat').val();
+                var current_location_lan = $('#current_location_lan').val();
+                var current_location_lon = $('#current_location_lon').val();
+                console.log(vechile_id)
+            });
+        });
+    </script>
+  </body>
+</html>

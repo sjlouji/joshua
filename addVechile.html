@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Vechiles</title>
+    <link rel="stylesheet" href="app.css">
+ 
+  </head>
+  <body>
+  <!-- Nav Bar Starts-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Joshua</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto navbar-right" style="margin-left:100px" >
+                  <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Vechile<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="consignment.html">Consignment<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="trip.html">Trip</a>
+                  </li>
+            </ul>
+        </div>
+  </nav>
+  <!--End of Nav Bar-->
+  <!--Start of the form -->
+  <div style="margin:50px">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Vechile</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Add Vechile</li>
+    </ol>
+  </nav>
+      <h2 style="margin-left:650px;margin-bottom:20px">Add Vechile</h2>
+      <form method="post" action="#" id="vechile_form">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Carcompany">Vehicle Number</label>
+              <input type="number" class="form-control" placeholder = "Vehicle Number" id="vechile_number" name="vechile_number" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Model">Max Capacity</label>
+              <input type="number" class="form-control" placeholder = "Max Capacity" name="max_capacity" id="max_capacity" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Owner Name</label>
+              <input type="text" class="form-control" placeholder="Owner Name" name="owner_name" id="owner_name" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Owner Contact number</label>
+              <input type="number" class="form-control" placeholder="Owner Contact number" name="ow_con_num" id="ow_con_num" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Shipper Location Lat</label>
+              <input type="number" class="form-control" placeholder="Shipper Location Lat" name="shipper_location_lat" id="shipper_location_lat" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="Price">Shipper Location Lon</label>
+              <input type="number" class="form-control" placeholder="Shipper Location Lon" name="shipper_location_lon" id="shipper_location_lon" required>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+                <div class="form-group col-md-4" style="margin-left:450px">
+                  <button type="submit" class="btn btn-success">Add Vechile</button>
+              </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  <!--End of the form -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#vechile_form').submit(function (event) {
+                event.preventDefault();
+                var vechile_number = $('#vechile_number').val();
+                var max_capacity = $('#max_capacity').val();
+                var owner_name = $('#owner_name').val();
+                var ow_con_num  = $('#ow_con_num').val();
+                var shipper_location_lat = $('#shipper_location_lat').val();
+                var shipper_location_lon = $('#shipper_location_lon').val();
+                console.log(vechile_number)
+            });
+        });
+    </script>
+  </body>
+</html>

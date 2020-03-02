@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Consignment</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <!-- Nav Bar Starts-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Joshua</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto navbar-right" style="margin-left:100px" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Vechile<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="consignment.html">Consignment<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="trip.html">Trip</a>
+                  </li>
+            </ul>
+        </div>
+  </nav>
+  <!--End of Nav Bar-->
+<!--View Products Starts-->
+  <div style="margin:40px">
+        <br />
+        <button class="btn btn-secondary" onclick="window.location.href = 'addConsignment.html';" target="_blank" style="float:right;margin-bottom: 10px">Add Consignment</button>
+        <table class="table table-striped table-hover" style="margin-top:30px">
+          <thead class="">
+            <tr>
+              <p>
+                <th>Material Code</th>
+                <th>Weight</th>
+                <th>Shipper Name</th>
+                <th>Shipper Contact number</th>
+                <th>Shipper Location Latitude</th>
+                <th>Shipper Location Longitude</th>
+              </p>  
+              <th colspan="2">Action</th>
+            </tr>
+          </thead>
+                    <tbody>
+            <tr>
+              <td>1</td>
+              <td>3</td>
+              <td>10/04/2020</td>
+              <td>1243.234.623.234</td>
+              <td>12341.2342.3432</td>
+              <td>234.234.23.</td>
+              <td>234.2342.3324.23</td>
+              <td>
+                  <form action="#" method="post">
+                    <input name="_method" type="hidden" value="DELETE">
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1</td>
+              <td>12/04/2019</td>
+              <td>143.34.23.34</td>
+              <td>11.23.32</td>
+              <td>24.24.3.2</td>
+              <td>23.22.24</td>
+              <td>
+                  <form action="#" method="post">
+                    <input name="_method" type="hidden" value="DELETE">
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+  </div>
+  <!--View Products Ends-->
+  </body>
+</html>
