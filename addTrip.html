@@ -108,7 +108,30 @@
                 var destination_lat  = $('#destination_lat').val();
                 var current_location_lan = $('#current_location_lan').val();
                 var current_location_lon = $('#current_location_lon').val();
+                var from = 'Trip';
                 console.log(vechile_id)
+                $.ajax({
+                  url: 'http://192.168.43.88:8080',
+                  data: {
+                    vechile_id : vechile_id,
+                    material_id : material_id,
+                    start_date : start_date,
+                    destination_lat : destination_lat,
+                    current_location_lan : current_location_lan,
+                    current_location_lon : current_location_lon,
+                  },
+                  type: 'POST',
+                  jsonpCallback: 'callback', 
+                  success: function (data) {
+                      var ret = jQuery.parseJSON(data);
+                      $('#lblResponse').html(ret.msg);
+                      console.log('Success: ')
+                  },
+                  error: function (xhr, status, error) {
+                      console.log('Error: ' + error.message);
+                      $('#lblResponse').html('Error connecting to the server.');
+                  },
+              });
             });
         });
     </script>

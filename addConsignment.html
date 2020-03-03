@@ -101,7 +101,31 @@
                 var shipper_contact  = $('#shipper_contact').val();
                 var shipper_location_lat = $('#shipper_location_lat').val();
                 var shipper_location_lon = $('#shipper_location_lon').val();
+                var from = 'Consignment';
                 console.log(material_code)
+                $.ajax({
+                  url: 'http://192.168.43.88:8080',
+                  data: {
+
+                    material_code : material_code,
+                    weight : weight,
+                    shipper_name : shipper_name,
+                    shipper_contact : shipper_contact,
+                    shipper_location_lat : shipper_location_lat,
+                    shipper_location_lon : shipper_location_lon,
+                  },
+                  type: 'POST',
+                  jsonpCallback: 'callback', 
+                  success: function (data) {
+                      var ret = jQuery.parseJSON(data);
+                      $('#lblResponse').html(ret.msg);
+                      console.log('Success: ')
+                  },
+                  error: function (xhr, status, error) {
+                      console.log('Error: ' + error.message);
+                      $('#lblResponse').html('Error connecting to the server.');
+                  },
+              });
             });
         });
     </script>

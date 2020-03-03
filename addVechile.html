@@ -101,7 +101,28 @@
                 var ow_con_num  = $('#ow_con_num').val();
                 var shipper_location_lat = $('#shipper_location_lat').val();
                 var shipper_location_lon = $('#shipper_location_lon').val();
+                var from = 'Vechile';
                 console.log(vechile_number)
+                $.ajax({
+                  url: 'http://192.168.43.88:8080',
+                  data: {
+                    vechile_number : vechile_number,
+                    max_capacity : max_capacity,
+                    owner_name : owner_name,
+                    ow_con_num : ow_con_num,
+                    shipper_location_lat : shipper_location_lat,
+                    shipper_location_lon : shipper_location_lon,
+                  },
+                  type: 'POST',
+                  jsonpCallback: 'callback', 
+                  success: function (data) {
+                      var ret = jQuery.parseJSON(data);
+                      console.log('Success: ')
+                  },
+                  error: function (xhr, status, error) {
+                      console.log('Error: ' + error.message);
+                  },
+              });
             });
         });
     </script>
